@@ -1,0 +1,36 @@
+@use "./variables.scss" as color;
+
+@use "./variables.scss" as v;
+
+%typo {
+  display: inline-block;
+  text-align: center;
+}
+
+.heading__primary {
+  @extend %typo;
+  font-size: clamp(5rem, 4vw + 3rem, 12rem);
+  font-weight: 700;
+  color: v.$color-white;
+  line-height: 1.2;
+}
+
+.heading__secondary {
+  @extend %typo;
+  font-family: var(--font-secondary);
+  font-size: clamp(4rem, 3vw + 3rem, 8rem);
+  font-weight: 900;
+  letter-spacing: -0.15px;
+  color: v.$color-white;
+  line-height: 1.2;
+  margin-top: 20rem;
+}
+
+.heading__tertiary {
+  @extend %typo;
+  font-family: var(--font-secondary);
+  font-size: clamp(2.4rem, 2vw + 2rem, 4.8rem);
+  font-weight: 700;
+  color: v.$color-primary;
+  line-height: 1.2;
+}

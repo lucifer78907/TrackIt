@@ -1,0 +1,31 @@
+@use "./components/extras/variables.scss" as v;
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  font-family: var(--font-primary);
+  background-color: #f8fafc;
+  box-sizing: border-box;
+  line-height: 1;
+  color: v.$color-body;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}

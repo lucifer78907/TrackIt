@@ -1,0 +1,63 @@
+@use "./extras/variables.scss" as v;
+
+@property --color-1 {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #00dbde;
+}
+
+@property --color-2 {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #fc00ff;
+}
+
+.features {
+  padding-bottom: 10rem;
+  --color-1: #00dbde;
+  --color-2: #fc00ff;
+  position: relative;
+  margin-top: -10rem;
+  min-height: 100vh;
+  padding: 10rem auto;
+  text-align: center;
+  background-image: linear-gradient(
+    to right bottom,
+    var(--color-1),
+    var(--color-2)
+  );
+  transition: --color-1 500ms, --color-2 500ms;
+  border-bottom-left-radius: 90px;
+  border-bottom-right-radius: 90px;
+}
+
+.features:hover,
+.features:focus-visible {
+  --color-1: #5433ff;
+  --color-2: #a5fecb;
+}
+
+.feature {
+  margin-top: 10rem;
+  padding: 4rem;
+  border-bottom-left-radius: 110px;
+  background-image: linear-gradient(to left, #fff 60%, transparent);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 6rem;
+
+  &__text-box {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    flex: 0 1 50%;
+  }
+
+  &__text-box--para {
+    font-size: clamp(1.3rem, 1vw + 2rem, 2.4rem);
+    font-weight: 400;
+    color: #075985;
+    line-height: 1.7;
+  }
+}
