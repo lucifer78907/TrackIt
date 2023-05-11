@@ -1,0 +1,77 @@
+@use "./extras/variables.scss" as v;
+
+.whyChooseUs {
+  min-height: 100vh;
+  text-align: center;
+  padding: 4rem;
+  background-image: url("../assets/images/Background.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.reasons {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 20rem);
+  column-gap: 4rem;
+  align-items: center;
+  margin-top: 10rem;
+}
+
+.reason {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  border-radius: 11px;
+  box-shadow: 0 2rem 4rem rgba(49, 58, 140, 0.1);
+  //transition: all 200ms ease-out;
+
+  &__icon {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  &__para {
+    font-size: 1.7rem;
+    line-height: 1.7;
+    font-weight: 500;
+    color: v.$color-body-light;
+  }
+
+  &__1 {
+    grid-row: 3/-1;
+  }
+
+  &__2 {
+    grid-row: 2/3;
+    grid-column: 2/3;
+  }
+
+  &__3 {
+    grid-row: 1/2;
+    grid-column: 3/4;
+  }
+
+  &__4 {
+    grid-row: 2/3;
+    grid-column: 4/5;
+  }
+
+  &__5 {
+    grid-row: 3/4;
+    grid-column: 5/-1;
+  }
+
+  &__head {
+    color: v.$color-body;
+  }
+
+  &:hover &__para {
+    color: v.$color-white;
+  }
+
+  &:hover &__head {
+    color: v.$color-white;
+  }
+}

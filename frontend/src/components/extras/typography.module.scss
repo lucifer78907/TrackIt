@@ -24,6 +24,17 @@
   color: v.$color-white;
   line-height: 1.2;
   margin-top: 20rem;
+
+  &--grad {
+    background-image: linear-gradient(
+      to right,
+      v.$color-primary,
+      var(--color-1)
+    );
+    background-clip: text;
+    color: transparent;
+    margin-top: 5rem;
+  }
 }
 
 .heading__tertiary {
@@ -33,4 +44,10 @@
   font-weight: 700;
   color: v.$color-primary;
   line-height: 1.2;
+}
+
+.heading__quaternary {
+  font-family: var(--font-secondary);
+  font-size: clamp(2.4rem, 2vw + 2rem, 4rem);
+  font-weight: 700;
 }

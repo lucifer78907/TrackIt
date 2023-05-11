@@ -12,7 +12,7 @@
   background-color: #f8fafc;
   backdrop-filter: blur(5px);
   border-radius: 11px;
-  box-shadow: 0 1rem 4rem rgba(24, 24, 24, 0.26);
+  box-shadow: 0 1rem 4rem rgba(24, 24, 24, 0.1);
   &__items {
     list-style: none;
     display: flex;
@@ -37,7 +37,7 @@
         top: 0;
         left: -10%;
         height: 110%;
-        background-color: #fc00ff;
+        background-color: #60a5fa;
         width: 0;
         z-index: -11;
         transition: width 200ms ease-in;
